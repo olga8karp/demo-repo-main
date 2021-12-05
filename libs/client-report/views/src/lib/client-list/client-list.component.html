@@ -1,0 +1,6 @@
+<div class="view-container">
+  <ng-container *ngrxLet="clientList$; let clientList">
+    <demo-repo-client-list-table [clientList]="clientList" (editDetails)="navigateToEdit($event)">
+    </demo-repo-client-list-table>
+  </ng-container>
+</div>

@@ -1,0 +1,25 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@demo-repo/client-report/ui": ["libs/client-report/ui/src/index.ts"],
+      "@demo-repo/client-report/views": ["libs/client-report/views/src/index.ts"],
+      "@demo-repo/shared/core-api": ["libs/shared/core-api/src/index.ts"],
+      "@demo-repo/shared/ui": ["libs/shared/ui/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

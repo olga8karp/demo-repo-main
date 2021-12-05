@@ -1,0 +1,136 @@
+<form [formGroup]="form" id="edit-client-details-form">
+  <div class="form-group row m-2">
+    <label class="col-sm-3 col-form-label">Name</label>
+    <div class="col-sm-9">
+      <input
+        type="text"
+        data-role="name"
+        [style]="{ width: '100%' }"
+        class="p-inputtext-sm"
+        formControlName="name"
+        pInputText
+      />
+    </div>
+  </div>
+  <div class="form-group row m-2">
+    <label class="col-sm-3 col-form-label font-bold">Gender</label>
+    <div class="col-sm-9">
+      <p-dropdown
+        [style]="{ width: '100%' }"
+        formControlName="gender"
+        class="client-edit-details__card__dropdown"
+        [options]="['male', 'female']"
+        placeholder="Select"
+        [showClear]="true"
+        data-role="gender"
+      >
+      </p-dropdown>
+    </div>
+  </div>
+  <div class="form-group row m-2">
+    <label class="col-sm-3 col-form-label font-bold">Birth Date</label>
+    <div class="col-sm-9">
+      <p-calendar
+        data-role="birth-date"
+        [style]="{ width: '100%' }"
+        [inputStyle]="{ width: '100%' }"
+        [maxDate]="getTodayDate()"
+        formControlName="birthDate"
+        dateFormat="dd/mm/yy"
+      ></p-calendar>
+    </div>
+  </div>
+  <div class="form-group row m-2">
+    <label class="col-sm-3 col-form-label font-bold">IBAN</label>
+    <div class="col-sm-9">
+      <input
+        data-role="iban"
+        type="text"
+        size="34"
+        class="p-inputtext-sm"
+        [style]="{ width: '100%' }"
+        formControlName="iban"
+        pInputText
+      />
+    </div>
+  </div>
+  <div class="form-group row m-2">
+    <label class="col-sm-3 col-form-label font-bold">Email Address</label>
+    <div class="col-sm-9">
+      <input
+        data-role="email"
+        type="email"
+        formControlName="email"
+        [style]="{ width: '100%' }"
+        class="p-inputtext-sm"
+        pInputText
+      />
+    </div>
+  </div>
+  <div class="form-group row m-2">
+    <label class="col-sm-3 col-form-label font-bold">Post Code</label>
+    <div class="col-sm-9">
+      <input
+        type="text"
+        size="35"
+        [style]="{ width: '100%' }"
+        formControlName="postCode"
+        class="p-inputtext-sm"
+        pInputText
+        data-role="post-code"
+      />
+    </div>
+  </div>
+  <div class="form-group row m-2">
+    <label class="col-sm-3 col-form-label font-bold">House no. | Addition</label>
+    <div class="col-sm-9">
+      <input
+        data-role="house-number"
+        type="number"
+        class="d-inline-block"
+        [style]="{ width: '70%', 'margin-right': '3%' }"
+        formControlName="houseNr"
+        class="p-inputtext-sm"
+        pInputText
+      />
+      <input
+        type="text"
+        class="d-inline-block"
+        [style]="{ width: '27%' }"
+        formControlName="addition"
+        data-role="addition"
+        class="p-inputtext-sm"
+        pInputText
+      />
+    </div>
+  </div>
+  <div class="form-group row m-2">
+    <label class="col-sm-3 col-form-label font-bold">City</label>
+    <div class="col-sm-9">
+      <input
+        type="text"
+        [style]="{ width: '100%' }"
+        class="d-inline"
+        class="p-inputtext-sm"
+        formControlName="city"
+        pInputText
+        data-role="city"
+      />
+    </div>
+  </div>
+  <div class="form-group row m-2">
+    <label class="col-sm-3 col-form-label font-bold">Country</label>
+    <div class="col-sm-9">
+      <p-dropdown
+        [style]="{ width: '100%' }"
+        class="client-edit-details__card__dropdown"
+        [options]="countriesList"
+        placeholder="Select"
+        [showClear]="true"
+        formControlName="country"
+        data-role="country"
+      >
+      </p-dropdown>
+    </div>
+  </div>
+</form>

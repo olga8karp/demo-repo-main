@@ -1,0 +1,36 @@
+<div class="view-container">
+  <ng-container *ngrxLet="clientData$; let clientData">
+    <div class="d-flex justify-content-center card-wrapper">
+      <div class="card client-edit-details__card">
+        <h3 class="card-header text-center">Edit client details</h3>
+        <div class="card-body">
+          <demo-repo-client-edit-details-form [clientData]="clientData"></demo-repo-client-edit-details-form>
+        </div>
+        <div class="card-footer text-center">
+          <div class="d-inline-block mx-3">
+            <p-button
+              label="Cancel"
+              styleClass="p-button-outlined p-button-secondary"
+              (click)="navigateToClientList()"
+              data-role="cancel"
+            ></p-button>
+          </div>
+          <p-button
+            type="submit"
+            form="edit-client-details-form"
+            label="Submit"
+            (click)="openSubmitSuccessModal()"
+            data-role="submit"
+          ></p-button>
+        </div>
+      </div>
+    </div>
+
+    <p-dialog header="Update Successful" [(visible)]="successModalOpened">
+      <p>Client details successfully updated</p>
+      <ng-template pTemplate="footer">
+        <p-button (click)="successModalOpened = false" label="Close"></p-button>
+      </ng-template>
+    </p-dialog>
+  </ng-container>
+</div>

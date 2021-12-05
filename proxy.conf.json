@@ -1,0 +1,9 @@
+{
+  "/api/*": {
+    "target": "https://api.ibanapi.com/",
+    "secure": true,
+    "logLevel": "info",
+    "changeOrigin": true,
+    "pathRewrite": { "^/api": "" }
+  }
+}
